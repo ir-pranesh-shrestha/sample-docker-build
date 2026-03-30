@@ -1,15 +1,15 @@
 # Use official Node.js LTS image
 FROM node:20-alpine
 
-# Set working directory
-WORKDIR /app
+# # Set working directory
+# WORKDIR /app
 
 # Copy package files and install dependencies
-COPY package*.json ./
-RUN npm install --production
+COPY app/package*.json ./app/
+RUN cd app && npm install --production
 
 # Copy application source
-COPY index.js .
+COPY app/index.js ./app/
 
 # Expose port
 EXPOSE 3000
