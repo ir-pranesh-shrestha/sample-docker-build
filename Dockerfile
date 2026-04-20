@@ -1,5 +1,5 @@
-# Use official Node.js LTS image
-FROM node:20-alpine
+# Use official
+FROM debian:12
 
 # # Set working directory
 # WORKDIR /app
